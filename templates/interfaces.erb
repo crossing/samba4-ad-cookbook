@@ -1,0 +1,9 @@
+auto lo
+iface lo inet loopback
+
+auto <%= @net['interface'] %>
+iface <%= @net['interface'] %> inet static
+address <%= @net['address'] %>
+netmask <%= @net['netmask'] %>
+network <%= @net['network'] %>
+broadcast <%= @net['broadcast'] %>

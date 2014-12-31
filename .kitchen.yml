@@ -1,0 +1,18 @@
+---
+driver:
+  name: vagrant
+
+provisioner:
+  name: chef_solo
+
+platforms:
+  - name: ubuntu-14.04
+    driver:
+      vm_hostname: dc1
+
+suites:
+  - name: default
+    run_list:
+      - recipe[samba4-ad]
+      - recipe[test-helper]
+    attributes:
